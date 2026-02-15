@@ -131,6 +131,16 @@ export default function Kanban() {
           </button>
         </div>
 
+        {/* Dashboard Summary */}
+        <div className="grid grid-cols-6 gap-3 mb-8">
+          {COLUMNS.map((column) => (
+            <div key={column} className="bg-blue-900 rounded-lg p-4 text-center border border-blue-700">
+              <p className="text-blue-300 text-sm font-medium">{column}</p>
+              <p className="text-white text-3xl font-bold">{getTasksByColumn(column).length}</p>
+            </div>
+          ))}
+        </div>
+
         {showNewTask && (
           <div className="bg-gray-800 p-6 rounded mb-8 border border-gray-700">
             <input
