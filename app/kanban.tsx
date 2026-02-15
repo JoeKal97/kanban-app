@@ -26,7 +26,7 @@ export default function Kanban() {
   const [newTask, setNewTask] = useState({
     title: '',
     description: '',
-    priority: 'Med' as const,
+    priority: 'Med' as 'Low' | 'Med' | 'High',
     tags: '',
   });
   const [draggedTask, setDraggedTask] = useState<Task | null>(null);
