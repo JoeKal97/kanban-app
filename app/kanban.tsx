@@ -118,12 +118,25 @@ export default function Kanban() {
       <div className="max-w-7xl mx-auto">
         <div className="flex justify-between items-center mb-8">
           <h1 className="text-4xl font-bold text-white">Kanban Board</h1>
-          <button
-            onClick={() => setShowNewTask(!showNewTask)}
-            className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded"
-          >
-            + New Task
-          </button>
+          <div className="flex gap-2">
+            {tasks.length === 0 && (
+              <button
+                onClick={() => {
+                  setTasks(INITIAL_TASKS as Task[]);
+                  localStorage.setItem('kanban-tasks', JSON.stringify(INITIAL_TASKS));
+                }}
+                className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded"
+              >
+                Load Initial Tasks
+              </button>
+            )}
+            <button
+              onClick={() => setShowNewTask(!showNewTask)}
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded"
+            >
+              + New Task
+            </button>
+          </div>
         </div>
 
         {/* Dashboard Summary */}
