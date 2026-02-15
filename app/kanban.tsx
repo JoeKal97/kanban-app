@@ -31,62 +31,49 @@ export default function Kanban() {
   });
   const [draggedTask, setDraggedTask] = useState<Task | null>(null);
 
-  // Load from API on mount
+  // Load from localStorage on mount (primary source)
   useEffect(() => {
-    fetch('/api/tasks')
-      .then(res => res.json())
-      .then(data => setTasks(data))
-      .catch(() => {
-        // Fallback to localStorage if API fails
-        const saved = localStorage.getItem('kanban-tasks');
-        if (saved) setTasks(JSON.parse(saved));
-      });
+    const saved = localStorage.getItem('kanban-tasks');
+    if (saved) {
+      setTasks(JSON.parse(saved));
+    }
   }, []);
 
-  const addTask = async () => {
+  // Sync to localStorage whenever tasks change
+  useEffect(() => {
+    localStorage.setItem('kanban-tasks', JSON.stringify(tasks));
+  }, [tasks]);
+
+  const addTask = () => {
     if (!newTask.title.trim()) return;
 
-    try {
-      const response = await fetch('/api/tasks', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          title: newTask.title,
-          description: newTask.description,
-          priority: newTask.priority,
-          tags: newTask.tags
-            .split(',')
-            .map((t) => t.trim())
-            .filter((t) => t),
-          column: 'Backlog',
-        }),
-      });
+    const task: Task = {
+      id: Date.now().toString(),
+      title: newTask.title,
+      description: newTask.description,
+      priority: newTask.priority,
+      tags: newTask.tags
+        .split(',')
+        .map((t) => t.trim())
+        .filter((t) => t),
+      column: 'Backlog',
+      createdDate: new Date().toISOString().split('T')[0],
+      updatedDate: new Date().toISOString().split('T')[0],
+    };
 
-      const task = await response.json();
-      setTasks([...tasks, task]);
-      setNewTask({ title: '', description: '', priority: 'Med', tags: '' });
-      setShowNewTask(false);
-    } catch (error) {
-      console.error('Failed to add task:', error);
-    }
+    setTasks([...tasks, task]);
+    setNewTask({ title: '', description: '', priority: 'Med', tags: '' });
+    setShowNewTask(false);
   };
 
-  const moveTask = async (task: Task, newColumn: typeof COLUMNS[number]) => {
-    try {
-      const response = await fetch('/api/tasks', {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          id: task.id,
-          column: newColumn,
-        }),
-      });
-
-      const updated = await response.json();
-      setTasks(tasks.map((t) => (t.id === task.id ? updated : t)));
-    } catch (error) {
-      console.error('Failed to move task:', error);
-    }
+  const moveTask = (task: Task, newColumn: typeof COLUMNS[number]) => {
+    setTasks(
+      tasks.map((t) =>
+        t.id === task.id
+          ? { ...t, column: newColumn, updatedDate: new Date().toISOString().split('T')[0] }
+          : t
+      )
+    );
   };
 
   const deleteTask = (id: string) => {
@@ -94,23 +81,6 @@ export default function Kanban() {
     const task = tasks.find((t) => t.id === id);
     if (task && task.column !== 'Done') {
       moveTask(task, 'Done');
-    }
-  };
-
-  // Bulk add tasks (for initialization)
-  const addBulkTasks = async (newTasks: Task[]) => {
-    for (const taskData of newTasks) {
-      try {
-        const response = await fetch('/api/tasks', {
-          method: 'POST',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify(taskData),
-        });
-        const task = await response.json();
-        setTasks((prev) => [...prev, task]);
-      } catch (error) {
-        console.error('Failed to add task:', error);
-      }
     }
   };
 
