@@ -31,17 +31,36 @@ export default function Kanban() {
   });
   const [draggedTask, setDraggedTask] = useState<Task | null>(null);
 
-  // Load from localStorage on mount (primary source)
+  // Load from API first, then localStorage as fallback
   useEffect(() => {
-    const saved = localStorage.getItem('kanban-tasks');
-    if (saved) {
-      setTasks(JSON.parse(saved));
-    }
+    const loadTasks = async () => {
+      try {
+        const response = await fetch('/api/tasks');
+        const data = await response.json();
+        if (data && data.length > 0) {
+          setTasks(data);
+          localStorage.setItem('kanban-tasks', JSON.stringify(data));
+          return;
+        }
+      } catch (error) {
+        console.log('API unavailable, using localStorage');
+      }
+      
+      // Fallback to localStorage
+      const saved = localStorage.getItem('kanban-tasks');
+      if (saved) {
+        setTasks(JSON.parse(saved));
+      }
+    };
+    
+    loadTasks();
   }, []);
 
   // Sync to localStorage whenever tasks change
   useEffect(() => {
-    localStorage.setItem('kanban-tasks', JSON.stringify(tasks));
+    if (tasks.length > 0) {
+      localStorage.setItem('kanban-tasks', JSON.stringify(tasks));
+    }
   }, [tasks]);
 
   const addTask = () => {
