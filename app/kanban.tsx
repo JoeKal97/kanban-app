@@ -109,6 +109,24 @@ export default function Kanban() {
     }
   };
 
+  const restoreFromBackup = (file: File) => {
+    const reader = new FileReader();
+    reader.onload = (e) => {
+      try {
+        const content = e.target?.result as string;
+        const parsedTasks = JSON.parse(content);
+        if (Array.isArray(parsedTasks)) {
+          setTasks(parsedTasks);
+          localStorage.setItem('kanban-tasks', JSON.stringify(parsedTasks));
+          alert('✓ Tasks restored from backup');
+        }
+      } catch (error) {
+        alert('✗ Invalid backup file');
+      }
+    };
+    reader.readAsText(file);
+  };
+
   const getTasksByColumn = (column: typeof COLUMNS[number]) => {
     return tasks.filter((t) => t.column === column);
   };
@@ -125,14 +143,46 @@ export default function Kanban() {
                   setTasks(INITIAL_TASKS as Task[]);
                   localStorage.setItem('kanban-tasks', JSON.stringify(INITIAL_TASKS));
                 }}
-                className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded"
+                className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded text-sm"
               >
                 Load Initial Tasks
               </button>
             )}
+            {tasks.length > 0 && (
+              <>
+                <button
+                  onClick={() => {
+                    const dataStr = JSON.stringify(tasks, null, 2);
+                    const dataBlob = new Blob([dataStr], { type: 'application/json' });
+                    const url = URL.createObjectURL(dataBlob);
+                    const link = document.createElement('a');
+                    link.href = url;
+                    link.download = `kanban-backup-${new Date().toISOString().split('T')[0]}.json`;
+                    link.click();
+                    URL.revokeObjectURL(url);
+                  }}
+                  className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded text-sm"
+                >
+                  💾 Backup Tasks
+                </button>
+                <input
+                  id="restore-input"
+                  type="file"
+                  accept=".json"
+                  onChange={(e) => e.target.files?.[0] && restoreFromBackup(e.target.files[0])}
+                  className="hidden"
+                />
+                <button
+                  onClick={() => document.getElementById('restore-input')?.click()}
+                  className="bg-orange-600 hover:bg-orange-700 text-white px-4 py-2 rounded text-sm"
+                >
+                  📂 Restore Backup
+                </button>
+              </>
+            )}
             <button
               onClick={() => setShowNewTask(!showNewTask)}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm"
             >
               + New Task
             </button>
