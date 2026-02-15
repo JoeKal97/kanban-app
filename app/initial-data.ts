@@ -1,0 +1,22 @@
+export const INITIAL_TASKS = [
+  {id:"1",title:"Zamurai Keyword Bootcamp",description:"Learned 7 keyword types + monetization framework",priority:"High",tags:["learning","keywords"],column:"Done",createdDate:"2026-02-14",updatedDate:"2026-02-14"},
+  {id:"2",title:"DFY Suite Research",description:"Research complete, SKILL.md created (18KB)",priority:"High",tags:["integration","skill"],column:"Done",createdDate:"2026-02-14",updatedDate:"2026-02-14"},
+  {id:"3",title:"On-Page SEO Blueprint",description:"Transcribed video (17K chars), absorbed teaching",priority:"High",tags:["learning","seo"],column:"Done",createdDate:"2026-02-14",updatedDate:"2026-02-14"},
+  {id:"4",title:"Global Control Center Research",description:"Research complete, SKILL.md created (47KB)",priority:"High",tags:["integration","skill"],column:"Done",createdDate:"2026-02-14",updatedDate:"2026-02-14"},
+  {id:"5",title:"GitHub kanban-app Repo",description:"Created & pushed code to GitHub",priority:"High",tags:["infrastructure"],column:"Done",createdDate:"2026-02-14",updatedDate:"2026-02-14"},
+  {id:"6",title:"Vercel Deployment",description:"Kanban app deployed and live",priority:"High",tags:["infrastructure"],column:"Done",createdDate:"2026-02-14",updatedDate:"2026-02-14"},
+  {id:"7",title:"PopLinks + Affiliate Hybrid Strategy",description:"Multi-page intent-based funnel",priority:"High",tags:["poplinks","strategy"],column:"In Progress",createdDate:"2026-02-14",updatedDate:"2026-02-14"},
+  {id:"8",title:"Claude API Cost Optimization",description:"Reduce spending from $95 baseline",priority:"Med",tags:["ops","cost"],column:"In Progress",createdDate:"2026-02-14",updatedDate:"2026-02-14"},
+  {id:"9",title:"Find VideoChief & MyVideoSpy Affiliate Links",description:"Get tracking URLs for both products",priority:"High",tags:["affiliate","poplinks"],column:"Review",createdDate:"2026-02-14",updatedDate:"2026-02-14"},
+  {id:"10",title:"Decide: Email Platform",description:"Choose email provider for PopLinks nurture",priority:"High",tags:["poplinks","infrastructure"],column:"Review",createdDate:"2026-02-14",updatedDate:"2026-02-14"},
+  {id:"11",title:"Choose Social Agency 360 Bump Offer",description:"Select or create bump offer for JVZoo",priority:"High",tags:["poplinks","affiliate"],column:"Review",createdDate:"2026-02-14",updatedDate:"2026-02-14"},
+  {id:"12",title:"Build PopLinks Sales Pages (4 Intent Angles)",description:"Review, Decision, Bonus, How-To pages",priority:"High",tags:["poplinks","content"],column:"Planned",createdDate:"2026-02-14",updatedDate:"2026-02-14"},
+  {id:"13",title:"GCC + PopLinks Integration",description:"Map how Global Control Center connects",priority:"High",tags:["integration","poplinks"],column:"Planned",createdDate:"2026-02-14",updatedDate:"2026-02-14"},
+  {id:"14",title:"Email Nurture Sequences",description:"Build 5-email sequences for bump offer",priority:"High",tags:["email","poplinks"],column:"Planned",createdDate:"2026-02-14",updatedDate:"2026-02-14"},
+  {id:"15",title:"Missoula Eats & Treats Keywords",description:"Research keywords + pillars for newsletter",priority:"Med",tags:["content","newsletter"],column:"Planned",createdDate:"2026-02-14",updatedDate:"2026-02-14"},
+  {id:"16",title:"Save Our Doggy Keywords",description:"Research keywords + pillars for newsletter",priority:"Med",tags:["content","newsletter"],column:"Planned",createdDate:"2026-02-14",updatedDate:"2026-02-14"},
+  {id:"17",title:"DFY Suite Campaign Automation",description:"Build Letterman → DFY pipeline",priority:"Med",tags:["dfy","automation"],column:"Planned",createdDate:"2026-02-14",updatedDate:"2026-02-14"},
+  {id:"18",title:"Newsletter Content Pipeline Launch",description:"Full launch: Zootown + Eats & Treats + Doggy",priority:"Med",tags:["newsletter","launch"],column:"Backlog",createdDate:"2026-02-14",updatedDate:"2026-02-14"},
+  {id:"19",title:"Sponsor Opportunity Detection",description:"5-step scoring for every newsletter topic",priority:"Med",tags:["newsletter","monetization"],column:"Backlog",createdDate:"2026-02-14",updatedDate:"2026-02-14"},
+  {id:"20",title:"Article Creation Workflow",description:"400-word everyday + 800-word hubs using SEO blueprint",priority:"Med",tags:["content","seo"],column:"Backlog",createdDate:"2026-02-14",updatedDate:"2026-02-14"}
+];

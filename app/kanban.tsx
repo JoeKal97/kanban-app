@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
+import { INITIAL_TASKS } from './initial-data';
 
 interface Task {
   id: string;
@@ -31,7 +32,7 @@ export default function Kanban() {
   });
   const [draggedTask, setDraggedTask] = useState<Task | null>(null);
 
-  // Load from API first, then localStorage as fallback
+  // Load from API first, then localStorage, then initial data
   useEffect(() => {
     const loadTasks = async () => {
       try {
@@ -43,14 +44,19 @@ export default function Kanban() {
           return;
         }
       } catch (error) {
-        console.log('API unavailable, using localStorage');
+        console.log('API unavailable');
       }
       
-      // Fallback to localStorage
+      // Try localStorage
       const saved = localStorage.getItem('kanban-tasks');
       if (saved) {
         setTasks(JSON.parse(saved));
+        return;
       }
+      
+      // Use initial data if nothing else available
+      setTasks(INITIAL_TASKS as Task[]);
+      localStorage.setItem('kanban-tasks', JSON.stringify(INITIAL_TASKS));
     };
     
     loadTasks();
