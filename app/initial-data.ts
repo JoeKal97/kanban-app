@@ -23,5 +23,6 @@ export const INITIAL_TASKS = [
   {id:"22",title:"Balboa Media OS - Timezone Handling Fix",description:"Fixed send schedule countdown - UTC storage + Denver conversion",priority:"High",tags:["balboa","timezone"],column:"Done",createdDate:"2026-02-16",updatedDate:"2026-02-16"},
   {id:"23",title:"Balboa Media OS - Schema Adapter",description:"Auto-detect column names (send_datetime_local vs send_datetime_utc)",priority:"High",tags:["balboa","database"],column:"Done",createdDate:"2026-02-16",updatedDate:"2026-02-16"},
   {id:"24",title:"Balboa Media OS - Zootown Schedule Config",description:"Fixed send_day_of_week to Friday (5), corrected send time to 11:00 AM",priority:"High",tags:["balboa","config"],column:"In Progress",createdDate:"2026-02-16",updatedDate:"2026-02-16"},
-  {id:"25",title:"Best Hotels in Missoula Article",description:"Draft ready - needs final review & publish",priority:"High",tags:["article","newsletter"],column:"Blocked",createdDate:"2026-02-16",updatedDate:"2026-02-16"}
+  {id:"25",title:"Best Hotels in Missoula Article",description:"Published to Zootown Lowdown - The Wren Hotel sponsorship",priority:"High",tags:["article","newsletter"],column:"Done",createdDate:"2026-02-16",updatedDate:"2026-02-16"},
+  {id:"26",title:"SerpSling Rank Tracking Campaign",description:"Set up tracking for 'best restaurants missoula' & 'best hotels missoula'",priority:"High",tags:["seo","tracking"],column:"Planned",createdDate:"2026-02-16",updatedDate:"2026-02-16"}
 ];
