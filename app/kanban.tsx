@@ -47,16 +47,23 @@ export default function Kanban() {
         console.log('API unavailable');
       }
       
-      // Try localStorage
-      const saved = localStorage.getItem('kanban-tasks');
-      if (saved) {
-        setTasks(JSON.parse(saved));
-        return;
+      // Check if we have a stored version
+      const savedVersion = localStorage.getItem('kanban-version');
+      const currentVersion = '2026-02-16-v2'; // Update this to force reset
+      
+      // Only use localStorage if version matches
+      if (savedVersion === currentVersion) {
+        const saved = localStorage.getItem('kanban-tasks');
+        if (saved) {
+          setTasks(JSON.parse(saved));
+          return;
+        }
       }
       
       // Use initial data if nothing else available
       setTasks(INITIAL_TASKS as Task[]);
       localStorage.setItem('kanban-tasks', JSON.stringify(INITIAL_TASKS));
+      localStorage.setItem('kanban-version', '2026-02-16-v2');
     };
     
     loadTasks();
@@ -66,6 +73,7 @@ export default function Kanban() {
   useEffect(() => {
     if (tasks.length > 0) {
       localStorage.setItem('kanban-tasks', JSON.stringify(tasks));
+      localStorage.setItem('kanban-version', '2026-02-16-v2');
     }
   }, [tasks]);
 
