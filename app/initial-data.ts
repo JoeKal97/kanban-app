@@ -193,12 +193,24 @@ export const INITIAL_TASKS = [
     id: "12",
     title: "Build Synthesia PopLinks Pages (4 Intent Angles)",
     description: "Review, Decision, Bonus, How-To pages for AI video tool",
-    details: "Page Strategy (adapt from VideoChief scripts):\n\n1. REVIEW Page: 'Synthesia Review 2026'\n   - Honest review with pros/cons\n   - Demo video/screenshots\n   - Affiliate CTA\n\n2. DECISION Page: 'Best AI Video Tool?'\n   - Compare Synthesia vs alternatives\n   - Position as #1 choice\n   - Scarcity/urgency\n\n3. BONUS Page: 'Synthesia + Templates Bundle'\n   - Main offer + bonus package\n   - Value stacking\n\n4. HOW-TO Page: 'How to Create Videos with AI'\n   - Tutorial angle\n   - Soft pitch at end\n\nStatus: Scripts need adaptation from VideoChief copy",
+    details: "Page Strategy (adapt from VideoChief scripts):\n\n1. REVIEW Page: 'Synthesia Review 2026'\n   - Honest review with pros/cons\n   - Demo video/screenshots\n   - Affiliate CTA: https://www.synthesia.io/?via=balboa\n\n2. DECISION Page: 'Best AI Video Tool?'\n   - Compare Synthesia vs alternatives\n   - Position as #1 choice\n   - Scarcity/urgency\n\n3. BONUS Page: 'Synthesia + Templates Bundle'\n   - Main offer + bonus package\n   - Value stacking\n\n4. HOW-TO Page: 'How to Create Videos with AI'\n   - Tutorial angle\n   - Soft pitch at end\n\nStatus: Scripts need adaptation from VideoChief copy\nAffiliate Link: https://www.synthesia.io/?via=balboa",
     category: "Revenue",
     status: "Ready",
     priority: "High",
     tags: ["funnel", "synthesia"],
     createdDate: "2026-02-14",
+    updatedDate: "2026-02-17"
+  },
+  {
+    id: "30",
+    title: "Facebook Ads Campaign - Synthesia Funnel",
+    description: "Complete paid traffic strategy: creatives → costs → conversions",
+    details: "STRATEGY DOCUMENT: FACEBOOK-ADS-STRATEGY-SYNTHESIA.md (18KB complete blueprint)\n\n**Campaign Overview:**\n- Objective: Lead magnet signups (AI Video Playbook)\n- Budget Phases: Testing ($50-100/day) → Scaling ($200-500/day)\n- Target CPL: $5-10 per lead\n- Target CPA: Under $200 per sale\n\n**Creative Strategy:**\n- 60% Video Ads (Joe talking head, screen recordings)\n- 25% Carousel Ads (5-card education series)\n- 15% Image Ads (retargeting, quick hooks)\n\n**4 Ad Angles:**\n1. Review/Testimonial - 'I tested 5 AI tools...'\n2. How-To - 'Create videos in 15 min'\n3. Results - '20 videos in one weekend'\n4. Pattern Interrupt - 'Stop filming, start creating'\n\n**Video Ad Scripts:** 3 variations ready (30s, 45s, 60s)\n\n**Audiences:**\n- Small Business Owners (2-5M)\n- Content Creators (1-3M)\n- Marketers (1-2M)\n- Retargeting (warm audiences)\n\n**Financial Projections:**\n- Conservative: $500 CPA, 0.53x ROAS\n- Target: $167 CPA, 1.6x ROAS\n- Optimistic: $50 CPA, 5.34x ROAS\n\n**Testing Matrix:**\n- Week 1-2: Creative testing (hooks, CTAs, visuals)\n- Week 3-4: Audience optimization\n- Month 2+: Scaling winners\n\n**Tracking:**\n- Facebook Pixel: CompleteRegistration event\n- UTM parameters on all links\n- Attribution: 7-day click, 1-day view\n\n**Launch Timeline:**\n- Pre-launch: Creative production, pixel setup\n- Week 1: Soft launch ($25-50/day)\n- Week 2: Full launch ($100/day)\n- Month 2: Scale ($200-500/day)\n\n**Status:** Strategy complete, ready for creative production",
+    category: "Growth",
+    status: "Ready",
+    priority: "High",
+    tags: ["facebook-ads", "traffic", "synthesia"],
+    createdDate: "2026-02-17",
     updatedDate: "2026-02-17"
   },
   {
