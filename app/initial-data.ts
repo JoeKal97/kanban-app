@@ -282,6 +282,18 @@ export const INITIAL_TASKS = [
   
   // BACKLOG
   {
+    id: "29",
+    title: "OPUS CLIP Affiliate Approval & Strategy",
+    description: "Get approved for Opus Clip and build secondary email sequence",
+    details: "SECONDARY OFFER STRATEGY (Post-Synthesia):\n\n**Why Opus Clip:**\n- 25% commission (~$25/customer)\n- Different use case: Repurposes long videos into shorts\n- Complements Synthesia (create → repurpose)\n- Organic traffic only (NO paid ads allowed)\n\n**Positioning:**\n'Synthesia creates your videos. Opus Clip turns one video into 10+ shorts for TikTok/Instagram/YouTube Shorts.'\n\n**Sequence Strategy:**\n- Phase 1: 5-email Synthesia sequence (immediate upon signup)\n- Phase 2: 3-email Opus Clip sequence (after Synthesia sequence completes)\n\n**Email 1 (Day 1 after Synthesia seq):** 'The Multi-Platform Video Strategy'\n- Why you need short-form content too\n- The 1-to-10 content multiplier concept\n\n**Email 2 (Day 3):** 'How I Turn One Video Into 10+ Pieces of Content'\n- Show the workflow\n- Introduce Opus Clip as the tool\n\n**Email 3 (Day 5):** 'Complete Video Workflow: Synthesia + Opus Clip'\n- Full system overview\n- CTA for Opus Clip\n\n**Status:** Need to apply for affiliate program\n**Action:** Apply at Opus Clip affiliate page",
+    category: "Revenue",
+    status: "Backlog",
+    priority: "Med",
+    tags: ["affiliate", "opus-clip", "sequence"],
+    createdDate: "2026-02-17",
+    updatedDate: "2026-02-17"
+  },
+  {
     id: "28",
     title: "Synthesia Content Ecosystem Build",
     description: "Create supporting content for Synthesia affiliate funnel",
