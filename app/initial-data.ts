@@ -117,15 +117,15 @@ export const INITIAL_TASKS = [
   // IN PROGRESS
   {
     id: "7",
-    title: "PopLinks + Affiliate Hybrid Strategy",
-    description: "Multi-page intent-based funnel",
-    details: "Funnel Architecture:\n- Page 1: VideoChief ($37-47) - Review angle with scarcity\n- Page 2: MyVideoSpy Bump ($47) - Video spy tool upsell\n- Page 3: Email Nurture - 5-email sequence for backend\n\nCopy complete in VIDEOCHIEFMYVIDESPY-COPY-SEQUENCES.md\n\nBLOCKERS:\n- DFY Suite affiliate link (need from Chad)\n- Email platform decision (ConvertKit vs Mailchimp)\n- MyVideoSpy tracking URL",
+    title: "Synthesia Affiliate Funnel Build",
+    description: "Multi-page intent-based funnel for AI video creation",
+    details: "PIVOTED from VideoChief to Synthesia (approved 2/17/26)\n\nFunnel Architecture:\n- Page 1: Synthesia Review ($22-30/mo) - AI video creation tool\n- Page 2: Bonus Offer - Templates/scripts bundle\n- Page 3: Email Nurture - AI video tips sequence\n\nCopy Status: Need to adapt from VideoChief scripts\n\nBLOCKERS:\n- Email platform decision (ConvertKit vs Mailchimp)\n- Bonus offer creation (templates bundle)\n- Need tracking URL from Synthesia",
     category: "Revenue",
     status: "In Progress",
     priority: "High",
-    tags: ["funnel", "blocked"],
+    tags: ["funnel", "synthesia"],
     createdDate: "2026-02-14",
-    updatedDate: "2026-02-14"
+    updatedDate: "2026-02-17"
   },
   {
     id: "8",
@@ -153,15 +153,15 @@ export const INITIAL_TASKS = [
   // REVIEW
   {
     id: "9",
-    title: "Find VideoChief & MyVideoSpy Affiliate Links",
-    description: "Get tracking URLs for both products",
-    details: "Need affiliate tracking URLs for:\n1. VideoChief - main offer ($37-47)\n2. MyVideoSpy - bump offer ($47)\n\nACTION: Contact Chad/DFY team for affiliate program details\n\nBLOCKING: PopLinks funnel completion - cannot build pages without tracking URLs",
+    title: "Get Synthesia Tracking URL & Commission Details",
+    description: "Obtain affiliate link and commission structure from Synthesia",
+    details: "Synthesia approved 2/17/26!\n\nNeed:\n1. Unique affiliate tracking URL\n2. Commission structure (likely 20-30% recurring)\n3. Cookie duration\n4. Any promotional assets (banners, logos)\n5. Terms & restrictions\n\nACTION: Check Synthesia affiliate dashboard or contact affiliate manager\n\nBLOCKING: Cannot build PopLinks pages without tracking URL",
     category: "Revenue",
     status: "Review",
     priority: "High",
-    tags: ["affiliate", "blocked"],
+    tags: ["affiliate", "synthesia"],
     createdDate: "2026-02-14",
-    updatedDate: "2026-02-14"
+    updatedDate: "2026-02-17"
   },
   {
     id: "10",
@@ -177,27 +177,29 @@ export const INITIAL_TASKS = [
   },
   {
     id: "11",
-    title: "Choose Social Agency 360 Bump Offer",
-    description: "Select or create bump offer for JVZoo",
+    title: "Create Synthesia Bonus Offer (Templates Bundle)",
+    description: "Build valuable bonus for Synthesia funnel bump",
+    details: "Bonus Package Ideas:\n1. 'Local Business Video Scripts' - 20 pre-written scripts\n2. 'AI Video Templates' - Canva-style templates for Synthesia\n3. 'Video Ad Swipe File' - High-converting video ad examples\n4. 'Synthesia Quick Start Guide' - PDF guide\n\nDelivery: Digital download via Gumroad or direct email\nValue Anchor: $97-197 (sold for $27-47 as bump)\n\nBLOCKING: Need to create digital products",
     category: "Revenue",
     status: "Review",
     priority: "High",
-    tags: ["offer", "blocked"],
+    tags: ["offer", "synthesia"],
     createdDate: "2026-02-14",
-    updatedDate: "2026-02-14"
+    updatedDate: "2026-02-17"
   },
   
   // READY (was Planned)
   {
     id: "12",
-    title: "Build PopLinks Sales Pages (4 Intent Angles)",
-    description: "Review, Decision, Bonus, How-To pages",
+    title: "Build Synthesia PopLinks Pages (4 Intent Angles)",
+    description: "Review, Decision, Bonus, How-To pages for AI video tool",
+    details: "Page Strategy (adapt from VideoChief scripts):\n\n1. REVIEW Page: 'Synthesia Review 2026'\n   - Honest review with pros/cons\n   - Demo video/screenshots\n   - Affiliate CTA\n\n2. DECISION Page: 'Best AI Video Tool?'\n   - Compare Synthesia vs alternatives\n   - Position as #1 choice\n   - Scarcity/urgency\n\n3. BONUS Page: 'Synthesia + Templates Bundle'\n   - Main offer + bonus package\n   - Value stacking\n\n4. HOW-TO Page: 'How to Create Videos with AI'\n   - Tutorial angle\n   - Soft pitch at end\n\nStatus: Scripts need adaptation from VideoChief copy",
     category: "Revenue",
     status: "Ready",
     priority: "High",
-    tags: ["funnel", "pages"],
+    tags: ["funnel", "synthesia"],
     createdDate: "2026-02-14",
-    updatedDate: "2026-02-14"
+    updatedDate: "2026-02-17"
   },
   {
     id: "13",
@@ -212,14 +214,15 @@ export const INITIAL_TASKS = [
   },
   {
     id: "14",
-    title: "Email Nurture Sequences",
-    description: "Build 5-email sequences for bump offer",
+    title: "Synthesia Email Nurture Sequence",
+    description: "Build 5-email sequence for AI video tips + soft pitch",
+    details: "Email Sequence Flow:\n\nEmail 1: 'Your AI Video Quick Start Guide'\n- Deliver bonus (if they got it)\n- Welcome + set expectations\n\nEmail 2: '3 Local Businesses Killing It with Video'\n- Case studies/examples\n- Soft mention of Synthesia\n\nEmail 3: 'The $5 Video Ad Framework'\n- Valuable tactic\n- Synthesia makes this easy\n\nEmail 4: 'Behind the Scenes: My Video Setup'\n- Show your workflow\n- Direct Synthesia pitch\n\nEmail 5: 'Last Chance: Synthesia Bonus Expires'\n- Urgency/scarcity\n- Final CTA\n\nStatus: Need email platform first (ConvertKit/Mailchimp)",
     category: "Revenue",
     status: "Ready",
     priority: "High",
-    tags: ["email", "sequence"],
+    tags: ["email", "synthesia"],
     createdDate: "2026-02-14",
-    updatedDate: "2026-02-14"
+    updatedDate: "2026-02-17"
   },
   {
     id: "15",
@@ -278,6 +281,18 @@ export const INITIAL_TASKS = [
   },
   
   // BACKLOG
+  {
+    id: "28",
+    title: "Synthesia Content Ecosystem Build",
+    description: "Create supporting content for Synthesia affiliate funnel",
+    details: "Content Pillars for Synthesia SEO + Traffic:\n\n1. REVIEW Article: 'Synthesia Review 2026: Best AI Video Tool?'\n   - Target: 'synthesia review', 'ai video generator review'\n   - 800-word pillar with screenshots\n   - Strong affiliate CTA\n\n2. COMPARISON: 'Synthesia vs [Competitors]'\n   - Target: 'synthesia vs heygen', 'best ai video tool'\n   - Position Synthesia as winner\n\n3. TUTORIAL: 'How to Create Professional Videos with AI'\n   - Target: 'how to make ai videos', 'ai video tutorial'\n   - Step-by-step with Synthesia\n\n4. LISTICLE: '10 Ways Local Businesses Use AI Video'\n   - Target: 'ai video marketing', 'video marketing ideas'\n   - Missoula business examples\n\n5. YOUTUBE: Screen recording tutorials\n   - Synthesia walkthrough\n   - Tips & tricks\n\nPurpose: Drive organic traffic to PopLinks pages",
+    category: "Content",
+    status: "Backlog",
+    priority: "Med",
+    tags: ["content", "synthesia", "seo"],
+    createdDate: "2026-02-17",
+    updatedDate: "2026-02-17"
+  },
   {
     id: "18",
     title: "Newsletter Content Pipeline Launch",
