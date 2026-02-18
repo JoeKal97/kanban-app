@@ -119,7 +119,7 @@ export const INITIAL_TASKS = [
     id: "7",
     title: "Synthesia Affiliate Funnel Build",
     description: "Multi-page intent-based funnel for AI video creation",
-    details: "PIVOTED from VideoChief to Synthesia (approved 2/17/26)\n\nFunnel Architecture:\n- Page 1: Synthesia Review ($22-30/mo) - AI video creation tool\n- Page 2: Bonus Offer - Templates/scripts bundle\n- Page 3: Email Nurture - AI video tips sequence\n\nCopy Status: Need to adapt from VideoChief scripts\n\nBLOCKERS:\n- Email platform decision (ConvertKit vs Mailchimp)\n- Bonus offer creation (templates bundle)\n- Need tracking URL from Synthesia",
+    details: "PIVOTED from VideoChief to Synthesia (approved 2/17/26)\n\nALREADY COMPLETED (Feb 16):\n- Synthesia research & commission structure (25% recurring, $267/customer)\n- Competitor analysis (Synthesia > HeyGen, Opus Clip, Descript, Runway)\n- Lead magnet strategy: 'AI Video Playbook' - 5 video series + PDF\n- All 5 video scripts WRITTEN and approved by Joe\n- Avatar strategy for Jessie Eagen real estate partnership\n- Synthesia account setup plan ($264/year Starter plan)\n\nPENDING:\n- Film 5 playbook videos (scripts ready)\n- Get Synthesia tracking URL (affiliate dashboard)\n- Build PopLinks pages (4 intent angles)\n- Set up Course Sprout for lead magnet delivery\n- Create email nurture sequence\n\nBLOCKERS:\n- Email platform decision (ConvertKit vs Mailchimp)\n\nReference: VIDEOCHIEFMYVIDESPY-COPY-SEQUENCES.md (adapt this copy)",
     category: "Revenue",
     status: "In Progress",
     priority: "High",
