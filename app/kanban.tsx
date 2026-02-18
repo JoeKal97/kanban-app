@@ -361,6 +361,24 @@ export default function Kanban() {
               ))}
             </div>
           </div>
+          
+          {/* Stats Bar */}
+          <div className="p-4 bg-gray-800 rounded-lg">
+            <div className="grid grid-cols-2 md:grid-cols-6 gap-4 text-center">
+              <div>
+                <div className="text-2xl font-bold text-white">{tasks.filter(t => t.status !== 'Done').length}</div>
+                <div className="text-gray-400 text-sm">Active Tasks</div>
+              </div>
+              {CATEGORIES.map(cat => (
+                <div key={cat}>
+                  <div className={`text-2xl font-bold ${CATEGORY_COLORS[cat].replace('bg-', 'text-')}`}>
+                    {getCategoryCount(cat)}
+                  </div>
+                  <div className="text-gray-400 text-sm">{cat}</div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
 
         {/* New Task Form - Hidden (managed by GrizBot) */}
@@ -553,24 +571,6 @@ export default function Kanban() {
               </div>
             </div>
           ))}
-        </div>
-        
-        {/* Footer Stats */}
-        <div className="mt-8 p-4 bg-gray-800 rounded-lg">
-          <div className="grid grid-cols-2 md:grid-cols-6 gap-4 text-center">
-            <div>
-              <div className="text-2xl font-bold text-white">{tasks.filter(t => t.status !== 'Done').length}</div>
-              <div className="text-gray-400 text-sm">Active Tasks</div>
-            </div>
-            {CATEGORIES.map(cat => (
-              <div key={cat}>
-                <div className={`text-2xl font-bold ${CATEGORY_COLORS[cat].replace('bg-', 'text-')}`}>
-                  {getCategoryCount(cat)}
-                </div>
-                <div className="text-gray-400 text-sm">{cat}</div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
 
