@@ -61,6 +61,7 @@ export default function Kanban() {
   });
   const [draggedTask, setDraggedTask] = useState<Task | null>(null);
   const [filterCategory, setFilterCategory] = useState<typeof CATEGORIES[number] | 'All'>('All');
+  const [searchQuery, setSearchQuery] = useState<string>('');
   const [selectedTask, setSelectedTask] = useState<Task | null>(null);
   const [showEditTask, setShowEditTask] = useState(false);
   const [editTask, setEditTask] = useState<Task | null>(null);
@@ -254,7 +255,21 @@ export default function Kanban() {
     return tasks.filter((t) => {
       const statusMatch = t.status === status;
       const categoryMatch = filterCategory === 'All' || t.category === filterCategory;
-      return statusMatch && categoryMatch;
+      
+      // Search filter
+      let searchMatch = true;
+      if (searchQuery.trim()) {
+        const query = searchQuery.toLowerCase();
+        const searchText = [
+          t.title,
+          t.description,
+          t.details || '',
+          ...t.tags
+        ].join(' ').toLowerCase();
+        searchMatch = searchText.includes(query);
+      }
+      
+      return statusMatch && categoryMatch && searchMatch;
     });
   };
 
@@ -334,9 +349,18 @@ export default function Kanban() {
             </div>
           </div>
           
-          {/* Category Filter */}
+          {/* Search & Filters */}
           <div className="flex gap-4 items-center bg-gray-800 p-4 rounded-lg">
-            <span className="text-gray-400 text-sm">Filter by Category:</span>
+            <span className="text-gray-400 text-sm">Search:</span>
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Type to search tasks..."
+              className="bg-gray-700 text-white px-3 py-2 rounded border border-gray-600 flex-grow max-w-md"
+            />
+            
+            <span className="text-gray-400 text-sm ml-4">Filter:</span>
             <select
               value={filterCategory}
               onChange={(e) => setFilterCategory(e.target.value as any)}
