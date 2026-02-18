@@ -150,14 +150,14 @@ export const INITIAL_TASKS = [
     updatedDate: "2026-02-16"
   },
   
-  // REVIEW
+  // DONE
   {
     id: "9",
     title: "Get Synthesia Tracking URL & Commission Details",
     description: "Obtain affiliate link and commission structure from Synthesia",
-    details: "Synthesia approved 2/17/26!\n\nNeed:\n1. Unique affiliate tracking URL\n2. Commission structure (likely 20-30% recurring)\n3. Cookie duration\n4. Any promotional assets (banners, logos)\n5. Terms & restrictions\n\nACTION: Check Synthesia affiliate dashboard or contact affiliate manager\n\nBLOCKING: Cannot build PopLinks pages without tracking URL",
+    details: "✅ COMPLETED 2/17/26 at 11:41 PM\n\n**Synthesia Affiliate Link:**\nhttps://www.synthesia.io/?via=balboa\n\n**Commission Structure:**\n- 25% recurring commission\n- ~$267 per customer LTV\n- 60-day cookie\n\n**Action:** Use this link in all marketing materials\n\n**Status:** Ready to deploy in PopLinks pages and email sequences",
     category: "Revenue",
-    status: "Review",
+    status: "Done",
     priority: "High",
     tags: ["affiliate", "synthesia"],
     createdDate: "2026-02-14",
@@ -281,13 +281,14 @@ export const INITIAL_TASKS = [
   },
   
   // BACKLOG
+  // REVIEW
   {
     id: "29",
     title: "OPUS CLIP Affiliate Approval & Strategy",
     description: "Get approved for Opus Clip and build secondary email sequence",
-    details: "SECONDARY OFFER STRATEGY (Post-Synthesia):\n\n**Why Opus Clip:**\n- 25% commission (~$25/customer)\n- Different use case: Repurposes long videos into shorts\n- Complements Synthesia (create → repurpose)\n- Organic traffic only (NO paid ads allowed)\n\n**Positioning:**\n'Synthesia creates your videos. Opus Clip turns one video into 10+ shorts for TikTok/Instagram/YouTube Shorts.'\n\n**Sequence Strategy:**\n- Phase 1: 5-email Synthesia sequence (immediate upon signup)\n- Phase 2: 3-email Opus Clip sequence (after Synthesia sequence completes)\n\n**Email 1 (Day 1 after Synthesia seq):** 'The Multi-Platform Video Strategy'\n- Why you need short-form content too\n- The 1-to-10 content multiplier concept\n\n**Email 2 (Day 3):** 'How I Turn One Video Into 10+ Pieces of Content'\n- Show the workflow\n- Introduce Opus Clip as the tool\n\n**Email 3 (Day 5):** 'Complete Video Workflow: Synthesia + Opus Clip'\n- Full system overview\n- CTA for Opus Clip\n\n**Status:** Need to apply for affiliate program\n**Action:** Apply at Opus Clip affiliate page",
+    details: "✅ AFFILIATE LINK ACQUIRED 2/17/26 at 11:41 PM\n\n**Opus Clip Affiliate Link:**\nhttps://www.opus.pro/?via=balboa\n\n**Why Opus Clip:**\n- 25% commission (~$25/customer)\n- Different use case: Repurposes long videos into shorts\n- Complements Synthesia (create → repurpose)\n- Organic traffic only (NO paid ads allowed)\n\n**Positioning:**\n'Synthesia creates your videos. Opus Clip turns one video into 10+ shorts for TikTok/Instagram/YouTube Shorts.'\n\n**Sequence Strategy:**\n- Phase 1: 5-email Synthesia sequence (immediate upon signup)\n- Phase 2: 3-email Opus Clip sequence (after Synthesia sequence completes)\n\n**Email 1 (Day 1 after Synthesia seq):** 'The Multi-Platform Video Strategy'\n- Why you need short-form content too\n- The 1-to-10 content multiplier concept\n\n**Email 2 (Day 3):** 'How I Turn One Video Into 10+ Pieces of Content'\n- Show the workflow\n- Introduce Opus Clip as the tool\n\n**Email 3 (Day 5):** 'Complete Video Workflow: Synthesia + Opus Clip'\n- Full system overview\n- CTA for Opus Clip\n\n**Status:** Ready to build 3-email sequence\n**Next Action:** Write 3 Opus Clip emails",
     category: "Revenue",
-    status: "Backlog",
+    status: "Review",
     priority: "Med",
     tags: ["affiliate", "opus-clip", "sequence"],
     createdDate: "2026-02-17",
