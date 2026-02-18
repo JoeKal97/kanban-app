@@ -315,11 +315,22 @@ export default function Kanban() {
                 </>
               )}
               <button
-                onClick={() => setShowNewTask(!showNewTask)}
-                className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded text-sm"
+                onClick={() => {
+                  localStorage.removeItem('kanban-tasks-v2');
+                  localStorage.removeItem('kanban-version-v2');
+                  const migrated = migrateTasks(INITIAL_TASKS);
+                  setTasks(migrated);
+                  localStorage.setItem('kanban-tasks-v2', JSON.stringify(migrated));
+                  localStorage.setItem('kanban-version-v2', '2026-02-17-v4');
+                  alert('✅ Reloaded fresh from server');
+                }}
+                className="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded text-sm"
               >
-                + New Task
+                🔄 Force Reload
               </button>
+              <span className="text-gray-400 text-sm flex items-center px-2">
+                📋 Managed by GrizBot
+              </span>
             </div>
           </div>
           
@@ -352,10 +363,11 @@ export default function Kanban() {
           </div>
         </div>
 
-        {/* New Task Form */}
+        {/* New Task Form - Hidden (managed by GrizBot) */}
         {showNewTask && (
           <div className="mb-8 bg-gray-800 p-6 rounded-lg border border-gray-700">
             <h2 className="text-xl font-semibold text-white mb-4">New Task</h2>
+            <p className="text-gray-400 mb-4">Task creation is managed by GrizBot. Ask me to add tasks instead.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="md:col-span-2">
                 <label className="block text-gray-400 text-sm mb-1">Title</label>
