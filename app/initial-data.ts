@@ -350,5 +350,17 @@ export const INITIAL_TASKS = [
     tags: ["workflow", "seo"],
     createdDate: "2026-02-14",
     updatedDate: "2026-02-14"
+  },
+  {
+    id: "31",
+    title: "Create AI Video Authority Course ($67 backend offer)",
+    description: "Proprietary course - backend upsell to Synthesia funnel",
+    details: "COURSE BLUEPRINT: AI-VIDEO-AUTHORITY-COURSE-BLUEPRINT.md (12KB complete outline)\n\n**Course Concept:**\nAdvanced AI video implementation course - natural next step after free AI Video Playbook\n\n**Positioning:**\n'You learned the basics in the free playbook. Now master the advanced strategies that separate amateurs from authorities.'\n\n**Price Point:** $67 (recommended)\n- Sweet spot for backend upsell\n- 3-5 hours of content + resources\n- Alternative: $47 (value) or $97 (premium with coaching)\n\n**6 Core Modules:**\n1. AI Video Authority Mindset (3 videos)\n2. Advanced Synthesia Mastery (4 videos)\n3. Multi-Platform Video Strategy (4 videos)\n4. Distribution & Promotion System (4 videos)\n5. Monetization Mastery (4 videos)\n6. Scaling & Automation (4 videos)\n\n**Total:** 23 videos, 3-5 hours, 6 modules\n\n**Downloadables:** Templates, checklists, scripts per module\n\n**Production Timeline:** 3-4 weeks\n\n**Where It Fits:**\nFree Playbook → Email Sequence → Synthesia Affiliate → Course Pitch ($67)\n\n**Revenue Potential:**\n- 10 sales/month = $670/month\n- 30 sales/month = $2,010/month\n\n**Status:** Blueprint complete, ready to script and film",
+    category: "Revenue",
+    status: "Ready",
+    priority: "High",
+    tags: ["course", "backend", "synthesia"],
+    createdDate: "2026-02-18",
+    updatedDate: "2026-02-18"
   }
 ];
